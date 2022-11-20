@@ -6,7 +6,7 @@ namespace Threading
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("nikitqa loh");
+            Console.WriteLine("thread");
         }
     }
 }
