@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Threading
+namespace Threading.FundamentalThreading
 {
     // Демонстрирует работу lock(). 2 треды ждут пока третья спит секунду
     // Показывает что у очереди тредов нет порядка и они отрабатывают
@@ -35,9 +35,9 @@ namespace Threading
         }
         private void WriteMessage(object obj)
         {
-            while(true)
+            while (true)
             {
-                lock(sync)
+                lock (sync)
                 {
                     Console.WriteLine("A");
                 }
@@ -46,9 +46,9 @@ namespace Threading
 
         private void SleepNahooj(object obj)
         {
-            while(true)
+            while (true)
             {
-                lock(sync)
+                lock (sync)
                 {
                     Console.WriteLine("SLEEP");
                     Thread.Sleep(1000);
